@@ -9,12 +9,14 @@ class ExamplePage extends Page {
 
     static url = '/'
 
-    static at = { title == 'Example Domain' }
+    static at = { title == 'Google' }
 
     /**
      * page content
      */
     static content = {
-        headline(wait: true) { $('h1', 0) }
+        headline(wait: true) { $('h2', 3) }
+        searchinput{$('input#lst-ib')}
+        searchbutton{$('input', type:'submit').btnK}
     }
 }
